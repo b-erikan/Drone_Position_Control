@@ -1,0 +1,152 @@
+[New LWP 89573]
+[New LWP 89578]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f895867d42f in __GI___wait4 (pid=89762, stat_loc=stat_loc@entry=0x7ffd63745ff8, options=options@entry=0, usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+30	../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.
+#0  0x00007f895867d42f in __GI___wait4 (pid=89762, stat_loc=stat_loc@entry=0x7ffd63745ff8, options=options@entry=0, usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+        sc_ret = -512
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+#1  0x00007f895867d3ab in __GI___waitpid (pid=<optimized out>, stat_loc=stat_loc@entry=0x7ffd63745ff8, options=options@entry=0) at ./posix/waitpid.c:38
+No locals.
+#2  0x00007f89585e3bdb in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:171
+        __result = <optimized out>
+        _cleanup_start_doit = true
+        _buffer = {__routine = 0x7f89585e3c60 <cancel_handler>, __arg = 0x7ffd63746000, __canceltype = 0, __prev = 0x0}
+        _cleanup_routine = 0x7f89585e3c60 <cancel_handler>
+        cancel_args = {quit = 0x7f89587af7a0 <quit>, intr = 0x7f89587af840 <intr>, pid = 89762}
+        status = -1
+        ret = 0
+        pid = 89762
+        sa = {__sigaction_handler = {sa_handler = 0x1, sa_sigaction = 0x1}, sa_mask = {__val = {65536, 0, 0, 0, 0, 549755813888, 0, 549755813888, 0, 551897006080, 0, 18446744073709551615, 0, 18446744073709551615, 0, 18446744073709551615}}, sa_flags = 0, sa_restorer = 0x7fa00000ffffffff}
+        omask = {__val = {128, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 94894083842944, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 140726272025952, 3618419345492043303, 4511096261181287424, 140726272025952, 2}}
+        reset = {__val = {6, 199, 140726272024864, 94894086106892, 140726272025248, 140227870045338, 140726272025264, 140726272025104, 140728825905153, 140726272025952, 140726272025952, 140726272025952, 140726272025952, 140726272026027, 140726272026151, 140726272025952}}
+        spawn_attr = {__flags = 12, __pgrp = 0, __sd = {__val = {6, 199, 140726272024864, 94894086106892, 140726272025248, 140227870045338, 140726272025264, 140726272025104, 140728825905153, 140726272025952, 140726272025952, 140726272025952, 140726272025952, 140726272026027, 140726272026151, 140726272025952}}, __ss = {__val = {128, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 94894083842944, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 140726272025952, 3618419345492043303, 4511096261181287424, 140726272025952, 2}}, __sp = {sched_priority = 0}, __policy = 0, __pad = {0 <repeats 16 times>}}
+#3  0x0000564e4038955b in AP_HAL::run_command_on_ownpid(char const*) ()
+No symbol table info available.
+#4  0x0000564e40389e0c in _sig_fpe(int) ()
+No symbol table info available.
+#5  <signal handler called>
+No locals.
+#6  0x0000564e40480a88 in ProportionalController::step(float*, float*) ()
+No symbol table info available.
+#7  0x0000564e403fb188 in AC_CustomControl_MC::update() ()
+No symbol table info available.
+#8  0x0000564e403fae5f in AC_CustomControl::update() ()
+No symbol table info available.
+#9  0x0000564e4028a526 in AP_Scheduler::run(unsigned int) ()
+No symbol table info available.
+#10 0x0000564e4028af0d in AP_Scheduler::loop() ()
+No symbol table info available.
+#11 0x0000564e4028f2db in AP_Vehicle::loop() ()
+No symbol table info available.
+#12 0x0000564e40382c4c in HAL_SITL::run(int, char* const*, AP_HAL::HAL::Callbacks*) const ()
+No symbol table info available.
+#13 0x0000564e401afda4 in main ()
+No symbol table info available.
+
+Thread 3 (Thread 0x7f8957d59640 (LWP 89578) "FTP"):
+#0  0x00007f89586787f8 in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7f8957d58a30, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+        r = <optimized out>
+#1  0x00007f895867d677 in __GI___nanosleep (req=req@entry=0x7f8957d58a30, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/nanosleep.c:25
+        ret = <optimized out>
+#2  0x00007f89586aef2f in usleep (useconds=<optimized out>) at ../sysdeps/posix/usleep.c:31
+        ts = {tv_sec = 0, tv_nsec = 1000000}
+#3  0x0000564e4038522a in HALSITL::SITL_State::wait_clock(unsigned long) ()
+No symbol table info available.
+#4  0x0000564e40387fcc in HALSITL::Scheduler::delay(unsigned short) ()
+No symbol table info available.
+#5  0x0000564e404561c0 in GCS_MAVLINK::ftp_worker() ()
+No symbol table info available.
+#6  0x0000564e40456b9f in void Functor<void>::method_wrapper<GCS_MAVLINK, &GCS_MAVLINK::ftp_worker>(void*) ()
+No symbol table info available.
+#7  0x0000564e40387924 in HALSITL::Scheduler::thread_create_trampoline(void*) ()
+No symbol table info available.
+#8  0x00007f8958627ac3 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
+        ret = <optimized out>
+        pd = <optimized out>
+        out = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140726272026896, -1004912873370999186, 140227860862528, 11, 140227870095312, 140726272027248, 945609394580694638, 945586408263984750}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+#9  0x00007f89586b9850 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+No locals.
+
+Thread 2 (Thread 0x7f895855a640 (LWP 89573) "log_io"):
+#0  0x00007f89586787f8 in __GI___clock_nanosleep (clock_id=clock_id@entry=0, flags=flags@entry=0, req=req@entry=0x7f8958559c80, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/clock_nanosleep.c:78
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+        r = <optimized out>
+#1  0x00007f895867d677 in __GI___nanosleep (req=req@entry=0x7f8958559c80, rem=rem@entry=0x0) at ../sysdeps/unix/sysv/linux/nanosleep.c:25
+        ret = <optimized out>
+#2  0x00007f89586aef2f in usleep (useconds=<optimized out>) at ../sysdeps/posix/usleep.c:31
+        ts = {tv_sec = 0, tv_nsec = 1000000}
+#3  0x0000564e4038522a in HALSITL::SITL_State::wait_clock(unsigned long) ()
+No symbol table info available.
+#4  0x0000564e40387c5d in HALSITL::Scheduler::delay_microseconds(unsigned short) ()
+No symbol table info available.
+#5  0x0000564e40294f04 in AP_Logger::io_thread() ()
+No symbol table info available.
+#6  0x0000564e402951af in void Functor<void>::method_wrapper<AP_Logger, &AP_Logger::io_thread>(void*) ()
+No symbol table info available.
+#7  0x0000564e40387924 in HALSITL::Scheduler::thread_create_trampoline(void*) ()
+No symbol table info available.
+#8  0x00007f8958627ac3 in start_thread (arg=<optimized out>) at ./nptl/pthread_create.c:442
+        ret = <optimized out>
+        pd = <optimized out>
+        out = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140726272028160, -1004912873370999186, 140227869255232, 11, 140227870095312, 140726272028512, 945586304299640430, 945586408263984750}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+#9  0x00007f89586b9850 in clone3 () at ../sysdeps/unix/sysv/linux/x86_64/clone3.S:81
+No locals.
+
+Thread 1 (Thread 0x7f895858e740 (LWP 89572) "arducopter"):
+#0  0x00007f895867d42f in __GI___wait4 (pid=89762, stat_loc=stat_loc@entry=0x7ffd63745ff8, options=options@entry=0, usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+        sc_ret = -512
+        sc_cancel_oldtype = 0
+        sc_ret = <optimized out>
+#1  0x00007f895867d3ab in __GI___waitpid (pid=<optimized out>, stat_loc=stat_loc@entry=0x7ffd63745ff8, options=options@entry=0) at ./posix/waitpid.c:38
+No locals.
+#2  0x00007f89585e3bdb in do_system (line=<optimized out>) at ../sysdeps/posix/system.c:171
+        __result = <optimized out>
+        _cleanup_start_doit = true
+        _buffer = {__routine = 0x7f89585e3c60 <cancel_handler>, __arg = 0x7ffd63746000, __canceltype = 0, __prev = 0x0}
+        _cleanup_routine = 0x7f89585e3c60 <cancel_handler>
+        cancel_args = {quit = 0x7f89587af7a0 <quit>, intr = 0x7f89587af840 <intr>, pid = 89762}
+        status = -1
+        ret = 0
+        pid = 89762
+        sa = {__sigaction_handler = {sa_handler = 0x1, sa_sigaction = 0x1}, sa_mask = {__val = {65536, 0, 0, 0, 0, 549755813888, 0, 549755813888, 0, 551897006080, 0, 18446744073709551615, 0, 18446744073709551615, 0, 18446744073709551615}}, sa_flags = 0, sa_restorer = 0x7fa00000ffffffff}
+        omask = {__val = {128, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 94894083842944, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 140726272025952, 3618419345492043303, 4511096261181287424, 140726272025952, 2}}
+        reset = {__val = {6, 199, 140726272024864, 94894086106892, 140726272025248, 140227870045338, 140726272025264, 140726272025104, 140728825905153, 140726272025952, 140726272025952, 140726272025952, 140726272025952, 140726272026027, 140726272026151, 140726272025952}}
+        spawn_attr = {__flags = 12, __pgrp = 0, __sd = {__val = {6, 199, 140726272024864, 94894086106892, 140726272025248, 140227870045338, 140726272025264, 140726272025104, 140728825905153, 140726272025952, 140726272025952, 140726272025952, 140726272025952, 140726272026027, 140726272026151, 140726272025952}}, __ss = {__val = {128, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 94894083842944, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 9196350441231745024, 140726272025952, 3618419345492043303, 4511096261181287424, 140726272025952, 2}}, __sp = {sched_priority = 0}, __policy = 0, __pad = {0 <repeats 16 times>}}
+#3  0x0000564e4038955b in AP_HAL::run_command_on_ownpid(char const*) ()
+No symbol table info available.
+#4  0x0000564e40389e0c in _sig_fpe(int) ()
+No symbol table info available.
+#5  <signal handler called>
+No locals.
+#6  0x0000564e40480a88 in ProportionalController::step(float*, float*) ()
+No symbol table info available.
+#7  0x0000564e403fb188 in AC_CustomControl_MC::update() ()
+No symbol table info available.
+#8  0x0000564e403fae5f in AC_CustomControl::update() ()
+No symbol table info available.
+#9  0x0000564e4028a526 in AP_Scheduler::run(unsigned int) ()
+No symbol table info available.
+#10 0x0000564e4028af0d in AP_Scheduler::loop() ()
+No symbol table info available.
+#11 0x0000564e4028f2db in AP_Vehicle::loop() ()
+No symbol table info available.
+#12 0x0000564e40382c4c in HAL_SITL::run(int, char* const*, AP_HAL::HAL::Callbacks*) const ()
+No symbol table info available.
+#13 0x0000564e401afda4 in main ()
+No symbol table info available.
+A debugging session is active.
+
+	Inferior 1 [process 89572] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+[Inferior 1 (process 89572) detached]

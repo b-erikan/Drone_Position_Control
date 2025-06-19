@@ -1,0 +1,14 @@
+[New LWP 89573]
+[New LWP 89578]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f895867d42f in __GI___wait4 (pid=89812, stat_loc=stat_loc@entry=0x7ffd63745ff8, options=options@entry=0, usage=usage@entry=0x0) at ../sysdeps/unix/sysv/linux/wait4.c:30
+30	../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.
+warning: target file /proc/89572/cmdline contained unexpected null characters
+Saved corefile ap-89813.core
+A debugging session is active.
+
+	Inferior 1 [process 89572] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+[Inferior 1 (process 89572) detached]
