@@ -15,5 +15,3 @@ The controller was developed as part of a project in the Automation & Control pr
 This repository serves as the firmware base for research and experimentation related to advanced control strategies for multirotor UAVs.
 
 ---
-
-Feel free to modify or extend this README as your project evolves.
